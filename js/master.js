@@ -46,20 +46,24 @@ $(function () {
     }
 
     function getFamMembers(){
-        $placeholder = $('#placeholder');
-        // var dataSet = cultuur;
-        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/?callback=foo', function(data) {
-            print = "id: " + (data);
-            console.log('loading'+ data[0].familyMemberId)
+        $navigation = $('nav li.dropdown .dropdown-menu');
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
+
+            for (var i=0;i<data.familymembers.length;i++)
+            {
+                print ='<li><a href="#user-' + data.familymembers[i].id + '">' + data.familymembers[i].name + '</a></li>';
+
+                $navigation.append(print);
+            }
         })
         .done(function(data) {
-            console.log( "second success" );
 
          })
         .complete(function(data) {
-            console.log( "done" );
 
          });
+
+
     }
     getFamMembers();
     // Clicking on the assignment row in order to assign
@@ -68,21 +72,6 @@ $(function () {
 
         var $li = $(this);
         var checked = $li.attr("data-checked") == "false";
-/*
-        if (checked) {
-        	var request = $.ajax({
-                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?patientId=1002840&questionnaireId='+$li.attr("data-id"),
-                async: false,
-                type: "POST"
-            }).done(function ( data ) {
-   			  $li.attr("data-assignment-id", data.data);
-			});
-        } else {
-        	var request = $.ajax({
-                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?assignmentId='+$li.attr("data-assignment-id"),
-                type: "DELETE"
-            });
-        }*/
 
         $(this).attr("data-checked", checked ? "true" : "false");
 
