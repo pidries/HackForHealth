@@ -45,7 +45,7 @@ $(function () {
          });
     }
 
-    function getFamMembers(){
+    /*function getFamMembers(){
         $navigation = $('nav li.dropdown .dropdown-menu');
         $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
 
@@ -62,7 +62,28 @@ $(function () {
             .complete(function(data) {
 
             });
+    }*/
+
+    function getFamMembers(){
+        $navigation = $("#familySelection");
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
+
+            for (var i=0;i<data.familymembers.length;i++)
+            {
+                print ='<li><a href="#user-' + data.familymembers[i].id + '">' + data.familymembers[i].name + '</a></li>';
+
+                $navigation.append(print);
+            }
+        })
+            .done(function(data) {
+
+            })
+            .complete(function(data) {
+
+            });
     }
+
+
     getFamMembers();
 
     // Clicking on the assignment row in order to assign

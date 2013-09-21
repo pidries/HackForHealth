@@ -36,11 +36,6 @@
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#all" data-type="all">Overview</a></li>
                 <li><a href="#linked" data-type="linked">Calendar</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Family members <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                    </ul>
-                </li>
             </ul>
             <div class=" navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle"
                                             data-toggler="profile">Angelina Jolie
@@ -136,7 +131,14 @@
     <div class="row">
         <div class="col-md-12 panel panel-default">
             <div class="panel-body text-right">
-                Showing information for [DropDown]
+                Showing information for
+                <div class="btn-group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                        all family members<span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" id="familySelection" role="menu">
+                    </ul>
+                </div>
             </div>
 
             <div class="row">
