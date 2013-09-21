@@ -118,6 +118,8 @@ $(function () {
 
 $(document).ready(function() {
     $("#accordion").accordion();
+
+    $("#datepicker").datepicker();
 });
 
 //    var date = new Date();
