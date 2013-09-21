@@ -51,10 +51,10 @@ $(function () {
 
         var $li = $(this);
         var checked = $li.attr("data-checked") == "false";
-        
+/*
         if (checked) {
         	var request = $.ajax({
-                url: 'http://localhost:8080/conductor/1/assignments?patientId=1002840&questionnaireId='+$li.attr("data-id"),
+                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?patientId=1002840&questionnaireId='+$li.attr("data-id"),
                 async: false,
                 type: "POST"
             }).done(function ( data ) { 
@@ -62,10 +62,10 @@ $(function () {
 			});
         } else {
         	var request = $.ajax({
-                url: 'http://localhost:8080/conductor/1/assignments?assignmentId='+$li.attr("data-assignment-id"),
+                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?assignmentId='+$li.attr("data-assignment-id"),
                 type: "DELETE"
             });
-        }
+        }*/
         
         $(this).attr("data-checked", checked ? "true" : "false");
 

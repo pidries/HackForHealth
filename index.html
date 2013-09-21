@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="nl" ng-app="QUES">
+<html lang="nl">
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,23 +19,13 @@
       <script src="js/respond.min.js"></script>
     <![endif]-->
 
-      <!-- Angular -->
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
-      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.js"></script>
-      <script src="js/backend.js"></script>
-      <script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.js"></script>
-      <script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.min.js"></script>
-      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
-
-
   </head>
-  <body ng-controller="QuestList">
-
+  <body>
     <div class="container">
       <!-- Static navbar -->
       <div class="navbar navbar-default">
         <div class="navbar-header">
-          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen vragenlijsten</p>
+          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen tsadfasdfetet</p>
         </div>
         <div class="navbar-collapse collapse">
           <p class="navbar-brand navbar-text navbar-right"><img src="images/ulrich.png" alt="Ulrich Kelchtermans" class="img-circle">Ulrich Kelchtermans</p>
@@ -50,15 +40,15 @@
           <div class="device well">
               <div>
                   <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
-                  <p>No iPad</p>
+                  <p>sgegeger</p>
               </div>
           </div>
 
         <!-- Patient detail -->
         <table class="table">
           <tr>
-            <th>Nummer</th>
-            <td>1050702</td>
+            <th>hfhfg</th>
+            <td>hhy</td>
           </tr>
           <tr>
             <th>Naam</th>
@@ -70,7 +60,7 @@
           </tr>
           <tr>
             <th>Geslacht</th>
-            <td>Vrouw</td>
+            <td>Vroujgjghw</td>
           </tr>
         </table>
       </div>
@@ -120,11 +110,11 @@
       <ul class="nav nav-pills assignment-filter">
         <li class="active"><a href="#all" data-type="all">Alle vragenlijsten</a></li>
         <li><a href="#linked" data-type="linked">Gekoppelde vragenlijsten</a></li>
-        <li><a href="#open" data-type="open">Beschikbare vragenlijsten</a></li>
+        <li><a href="#open" data-type="open">sadfasdf sadfasdf</a></li>
       </ul>
 
         <ul class="assignments list-group">
-            <li ng-repeat="quest in quests" data-id="{{quest.itemData.id}}" data-assignment-id="{{quest.assignmentId}}" data-checked="{{quest.checked == true}}" class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>{{quest.itemData.name}}</span></li>
+            <li data-id="{{quest.itemData.id}}" data-assignment-id="{{quest.assignmentId}}" data-checked="{{quest.checked == true}}" class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>{{quest.itemData.name}}</span></li>
         </ul>
 
     </div> <!-- /container -->
@@ -134,7 +124,6 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/master.js"></script>
 
   </body>
 </html>
