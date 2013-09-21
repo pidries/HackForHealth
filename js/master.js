@@ -140,7 +140,37 @@ $(function () {
 $(document).ready(function() {
     $("#accordion").accordion();
 
-    $("#datepicker").datepicker();
+    $("#datepicker").datepicker({
+        dateFormat: "yy-mm-dd",
+        onSelect: function(value) {
+            getMedicinIntakes(value);
+        }
+    });
+
+    function getMedicinIntakes(date) {
+        var $intakeTable = $("#intakeTable tbody");
+        $intakeTable.empty();
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/intakes/', function (data) {
+            var intakes = data.intakes;
+            for (var i = 0; i < intakes.length; i++) {
+                var intake = intakes[i];
+                if (intake.timestamp == date) {
+                    print = '<tr>';
+                    print += '  <td>' + intake.timestamp + '</td>';
+                    print += '  <td>' + intake.amount + 'x</td>';
+                    print += '  <td>' + intake.name + '</td>';
+                    print += '  <td>' + intake.familyMemberId + '</td>';
+                    print += '</tr>';
+
+                    $intakeTable.append(print);
+                }
+            }
+        })
+        .done(function (data) {
+        })
+        .complete(function (data) {
+        });
+    }
 });
 
 //    var date = new Date();
