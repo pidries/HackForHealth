@@ -15,36 +15,39 @@
     <link href="css/fullcalendar.css" rel="stylesheet">
 
 
-  </head>
-  <body>
-    <div class="container">
+</head>
+<body>
+<div class="container">
 
-        <nav class="navbar navbar-default" role="navigation">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"><img src="images/logo.png" /></a>
+    <nav class="navbar navbar-default" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><img src="images/logo.png"/></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#all" data-type="all">Overview</a></li>
+                <li><a href="#linked" data-type="linked">Calendar</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Family members <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                    </ul>
+                </li>
+            </ul>
+            <div class=" navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle"
+                                            data-toggler="profile">Angelina Jolie
             </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="#all" data-type="all">Overview</a></li>
-                    <li><a href="#linked" data-type="linked">Calendar</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Family members <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                        </ul>
-                    </li>
-                </ul>
-                <div class=" navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle" data-toggler="profile">Angelina Jolie</div>
-            </div><!-- /.navbar-collapse -->
-        </nav>
+        </div>
+        <!-- /.navbar-collapse -->
+    </nav>
 
 
     <!-- Patient header -->
@@ -141,6 +144,7 @@
                     <div class="panel-body">
                         <div id="accordion">
                             <h3>Section 1</h3>
+
                             <div>
                                 <p>
                                     Mauris mauris ante, blandit et, ultrices a, suscipit eget, quam. Integer
@@ -150,6 +154,7 @@
                                 </p>
                             </div>
                             <h3>Section 2</h3>
+
                             <div>
                                 <p>
                                     Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum sit amet
@@ -159,6 +164,7 @@
                                 </p>
                             </div>
                             <h3>Section 3</h3>
+
                             <div>
                                 <p>
                                     Nam enim risus, molestie et, porta ac, aliquam ac, risus. Quisque lobortis.
@@ -173,6 +179,7 @@
                                 </ul>
                             </div>
                             <h3>Section 4</h3>
+
                             <div>
                                 <p>
                                     Cras dictum. Pellentesque habitant morbi tristique senectus et netus
@@ -180,6 +187,7 @@
                                     faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
                                     mauris vel est.
                                 </p>
+
                                 <p>
                                     Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
                                     Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
@@ -198,15 +206,11 @@
         </div>
     </div>
 </div>
-    <script>
-        $(function() {
-            $( "#accordion" ).accordion();
-        });
-    </script>
 <!-- Bootstrap core JavaScript
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery-ui.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script src="js/fullcalendar.min.js"></script>
 <script src="js/master.js"></script>

@@ -117,7 +117,9 @@ $(function () {
 
 });
 
-//$(document).ready(function() {
+$(document).ready(function() {
+    $("#accordion").accordion();
+});
 //
 //    var date = new Date();
 //    var d = date.getDate();
