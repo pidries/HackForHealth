@@ -33,6 +33,6 @@ $(document).ready(function () {
 });
 
 function toggleIcon(obj) {
-    $(obj).toggleClass("glyphicon-ok");
-    $(obj).toggleClass("glyphicon-remove");
+    $(obj).find(".glyphicon").toggleClass("glyphicon-ok");
+    $(obj).find(".glyphicon").toggleClass("glyphicon-remove");
 }
