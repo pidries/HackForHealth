@@ -16,49 +16,79 @@
   </head>
   <body>
     <div class="container">
-      <!-- Static navbar -->
-      <div class="navbar navbar-default">
-        <div class="navbar-header">
-          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen vragenlijsten</p>
-        </div>
-        <div class="navbar-collapse collapse">
-          <p class="navbar-brand navbar-text navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle">Angelina Jolie</p>
-        </div><!--/.nav-collapse -->
-      </div>
+
+      <nav class="navbar navbar-default" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><img src="images/logo.png" /></a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+    <li class="active"><a href="#all" data-type="all">Overview</a></li>
+    <li><a href="#linked" data-type="linked">Calendar</a></li>
+<!--     <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+          <li><a href="#">One more separated link</a></li>
+        </ul>
+      </li> -->
+    </ul>
+  <div class=" navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle">Angelina Jolie</div>
+  </div><!-- /.navbar-collapse -->
+</nav>
 
       <!-- Patient header -->
-      <div class="jumbotron">
+      <div class="well ">
+        <div class="row">
+        <div class="col-md-2">
         <img src="images/angelina.jpg" alt="Angelina Jolie" class="img-thumbnail" />
-        
+        </div>
+        <div class="col-md-10">
         <!-- Patient's connected device -->
-          <div class="device well">
-              <div>
+
+          <div class="col-md-6">
+          <!-- Patient detail -->
+            <table class="table">
+              <tr>
+                <th>Nummer</th>
+                <td>1050702</td>
+              </tr>
+              <tr>
+                <th>Naam</th>
+                <td>Angelina Jolie</td>
+              </tr>
+              <tr>
+                <th>Geboortedatum</th>
+                <td>14 mei 1976</td>
+              </tr>
+              <tr>
+                <th>Geslacht</th>
+                <td>Vrouw</td>
+              </tr>
+            </table>
+          </div>
+          <div class="device  col-md-4  pull-right">
+              <div class="well">
                   <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
                   <p>Family member</p>
               </div>
           </div>
 
-        <!-- Patient detail -->
-        <table class="table">
-          <tr>
-            <th>Nummer</th>
-            <td>1050702</td>
-          </tr>
-          <tr>
-            <th>Naam</th>
-            <td>Angelina Jolie</td>
-          </tr>
-          <tr>
-            <th>Geboortedatum</th>
-            <td>14 mei 1976</td>
-          </tr>
-          <tr>
-            <th>Geslacht</th>
-            <td>Vrouw</td>
-          </tr>
-        </table>
-      </div>
 
+        </div>
+      </div>
       <!-- Devices -->
       <div class="devices">
         <p class="description">Selecteer een familielid.</p>
@@ -101,10 +131,6 @@
       </div>
 
       <!-- Assignments -->
-      <ul class="nav nav-pills assignment-filter">
-        <li class="active"><a href="#all" data-type="all">Overview</a></li>
-        <li><a href="#linked" data-type="linked">Calendar</a></li>
-      </ul>
 
         <ul class="assignments list-group">
             <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>Medicin 1</span></li>

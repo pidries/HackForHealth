@@ -2,32 +2,29 @@ body {
     padding: 30px;
 }
 
+
+@media (max-width: 970px) {
+    .pull-right{
+        float: left !important;
+    }
+}
+
 /* Navbar */
 
-.navbar {
-    margin-bottom: 30px;
+.navbar
+.navbar-brand  img{
+    max-height: 50px;
 }
-
-.navbar .navbar-brand {
-    margin-top: 1em;
+.navbar-right img{
+    max-width: 40px;
+    margin: 20px 10px;
 }
-
-.navbar .navbar-brand,
-.navbar .navbar-text {
-    font-size: 120%;
+@media (min-width: 768px){
+.navbar-nav>li>a {
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
-.navbar .navbar-brand img {
-    height: 60px;
-    margin: -2em 1em -2em 0em; 
 }
-
-.navbar .navbar-text img {
-    width: 30px;
-    height: 30px;
-    margin: -2em .5em -2em 0em; 
-}
-
 /* Patient details */
 
 .jumbotron {
@@ -51,26 +48,10 @@ body {
 
 /* Selected device */
 
-.device {
-    position: relative;
-    float: right;
-
-    width: 150px;
-    height: 200px;
-
+.device p{
     text-align: center;
-
-    cursor: pointer;
 }
 
-.device div {
-    position: absolute;
-    top: 50%;
-
-    height: 130px;
-    width: 110px;
-    margin-top: -65px;
-}
 
 .device img {
     display: block;
@@ -82,8 +63,9 @@ body {
     margin-right: auto;
 }
 
-.device:hover {
+.device .well:hover {
     background-color: #e3e3e3;
+    cursor: pointer;
 }
 
 /* Devices */
@@ -123,7 +105,7 @@ body {
 .assignments li {
     position: relative;
     top: 0;
-    left: 0;   
+    left: 0;
 }
 
 .assignments li {
