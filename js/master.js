@@ -56,16 +56,15 @@ $(function () {
                 $navigation.append(print);
             }
         })
-        .done(function(data) {
+            .done(function(data) {
 
-         })
-        .complete(function(data) {
+            })
+            .complete(function(data) {
 
-         });
-
-
+            });
     }
     getFamMembers();
+
     // Clicking on the assignment row in order to assign
     $(document).on("click", ".assignments li", function () {
         if ($(":animated").length > 0) return false;
@@ -120,7 +119,7 @@ $(function () {
 $(document).ready(function() {
     $("#accordion").accordion();
 });
-//
+
 //    var date = new Date();
 //    var d = date.getDate();
 //    var m = date.getMonth();
