@@ -103,9 +103,9 @@ $(function () {
 
     // jQuery effect to hide the patient information on page load. Show this information on profile click.
     jQuery(document).ready(function() {
-        jQuery(".toggle").click(function() {
-                console.log($(this));
-            $(this).find('.hide').removeClass('hide');
+        $(".navbar-right").click(function() {
+            console.log(('.toggle'));
+            $('.toggle').slideToggle();
         });
     });
 
