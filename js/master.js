@@ -48,7 +48,6 @@ $(function () {
     function getFamMembers(){
         $navigation = $('nav li.dropdown .dropdown-menu');
         $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
-            print = "id: " + data.familymembers[0].name;
 
             for (var i=0;i<data.familymembers.length;i++)
             {
@@ -73,21 +72,6 @@ $(function () {
 
         var $li = $(this);
         var checked = $li.attr("data-checked") == "false";
-/*
-        if (checked) {
-        	var request = $.ajax({
-                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?patientId=1002840&questionnaireId='+$li.attr("data-id"),
-                async: false,
-                type: "POST"
-            }).done(function ( data ) {
-   			  $li.attr("data-assignment-id", data.data);
-			});
-        } else {
-        	var request = $.ajax({
-                url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?assignmentId='+$li.attr("data-assignment-id"),
-                type: "DELETE"
-            });
-        }*/
 
         $(this).attr("data-checked", checked ? "true" : "false");
 
