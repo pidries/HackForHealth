@@ -1,17 +1,22 @@
 $(document).ready(function() {
-    var date = new Date();
-    var d = date.getDate();
-    var m = date.getMonth();
-    var y = date.getFullYear();
+    $(".navbar-right").click(function() {
+        console.log(('.toggle'));
+        $('.toggle').slideToggle();
+    });
 
-    $('#calendar').fullCalendar({
-        header: {
-            left: 'prev,next today',
-            center: 'title',
-            right: 'month,basicWeek,basicDay'
-        },
-        editable: false,
-        events: [
+    function loadTable() {
+        var date = new Date();
+        var d = date.getDate();
+        var m = date.getMonth();
+        var y = date.getFullYear();
+        $('#calendar').fullCalendar({
+            header: {
+                left: 'prev,next today',
+                center: 'title',
+                right: 'month,basicWeek,basicDay'
+            },
+            editable: false,
+            events: [
 //            {
 //                title: 'All Day Event',
 //                start: new Date(y, m, 1)
@@ -56,10 +61,12 @@ $(document).ready(function() {
 //                end: new Date(y, m, 29),
 //                url: 'http://google.com/'
 //            }
-        ],
-        eventClick: function (event) {
-            window.alert(event.title);
-        }
-    });
+            ],
+            eventClick: function (event) {
+                window.alert(event.title);
+            }
+        });
+    }
 
+    loadTable();
 });
