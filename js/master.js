@@ -138,34 +138,19 @@ $(function () {
     function getAllMedicines() {
         $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/medicines', function(data) {
             for (var i = 0; i < data.medicines.length; i++) {
-
                 print = "<h3>" + data.medicines[i].name + " " + data.medicines[i].description + "</h3>" +
-                    "<div id='" + data.medicines[i].name + "'></div>";
+                    "<div id='" + data.medicines[i].name + "'>" +
+                    "<p>" + data.medicines[i].usage + " " + data.medicines[i].packaging.amount + " Tabletten resterend" + "</p>" +
+                    "<p>" + "Toegevoegd voor: " + data.medicines[i].familyMembers[0].name + "</p></div>";
 
                 $('#accordion').append(print);
             }
         })
-            .done(function(data) {
-            })
-            .complete(function(data) {
-                $("#accordion").accordion();
-
-                $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/medicines/1', function(data) {
-                    alert("detailCall");
-                    print = "<p>" + data.medicineDetail.usage + " " + data.medicineDetail.packaging.amount + " Tabletten resterend" + "</p>" +
-                        "<p>" + "Toegevoegd voor: " + data.medicineDetail.familyMembers[0].name + "</p>";
-
-                    $('#'+data.medicines[i].name).append(print);
-                })
-
-                    .done(function(data) {
-                    })
-
-                    .complete(function(data) {
-                    });
-            });
-
-
+        .done(function(data) {
+        })
+        .complete(function(data) {
+            $("#accordion").accordion();
+        });
     }
     getAllMedicines();
 
