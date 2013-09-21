@@ -1,0 +1,142 @@
+body {
+    padding: 30px;
+}
+
+/* Navbar */
+
+.navbar {
+    margin-bottom: 30px;
+}
+
+.navbar .navbar-brand {
+    margin-top: 1em;
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-text {
+    font-size: 120%;
+}
+
+.navbar .navbar-brand img {
+    height: 60px;
+    margin: -2em 1em -2em 0em; 
+}
+
+.navbar .navbar-text img {
+    width: 30px;
+    height: 30px;
+    margin: -2em .5em -2em 0em; 
+}
+
+/* Patient details */
+
+.jumbotron {
+    padding-bottom: 30px;
+}
+
+.jumbotron .img-thumbnail {
+    float: left;
+
+    width: 150px;
+    height: 150px;
+}
+
+.jumbotron table {
+    display: block;
+
+    padding: 10px 220px 0 200px;
+
+    font-size: 60%;
+}
+
+/* Selected device */
+
+.device {
+    position: relative;
+    float: right;
+
+    width: 150px;
+    height: 150px;
+
+    text-align: center;
+
+    cursor: pointer;
+}
+
+.device div {
+    position: absolute;
+    top: 50%;
+
+    height: 130px;
+    width: 110px;
+    margin-top: -65px;
+}
+
+.device img {
+    display: block;
+
+    width: 100px;
+    height: 100px;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.device:hover {
+    background-color: #e3e3e3;
+}
+
+/* Devices */
+
+.devices {
+    display: none;
+    float: right;
+
+    margin-bottom: 1em;
+
+    border: 1px solid #e3e3e3;
+}
+
+.devices p.description {
+    margin-bottom: 1.5em;
+    padding-bottom: 1em;
+
+    text-align: center;
+    font-size: 130%;
+}
+
+.devices .device {
+    margin-right: 2.5em;
+}
+
+/* Question list */
+
+.nav-pills {
+    margin-bottom: 1em;
+}
+
+.assignment-filter {
+    clear: both;
+}
+
+.assignments,
+.assignments li {
+    position: relative;
+    top: 0;
+    left: 0;   
+}
+
+.assignments li {
+    padding: 1em;
+
+    cursor: pointer;
+}
+
+.assignments li .glyphicon {
+    margin-right: 1em;
+}
+
+.assignments li[data-checked="false"]>.glyphicon,
+.assignments li[data-checked="false"] {
+    color: #999;
+}

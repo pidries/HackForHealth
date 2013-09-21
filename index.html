@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="nl" ng-app="QUES">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Questionnaires assignment application">
+    <meta name="author" content="Innovation Studio">
+    <!-- <link rel="shortcut icon" href="../../assets/ico/favicon.png"> -->
+
+    <title>Toewijzen vragenlijsten</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/master.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.js"></script>
+      <script src="js/respond.min.js"></script>
+    <![endif]-->
+
+      <!-- Angular -->
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular-resource.js"></script>
+      <script src="js/backend.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.js"></script>
+      <script type="text/javascript" src="http://cdn.jsdelivr.net/restangular/latest/restangular.min.js"></script>
+      <script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.1/underscore-min.js"></script>
+
+
+  </head>
+  <body ng-controller="QuestList">
+
+    <div class="container">
+      <!-- Static navbar -->
+      <div class="navbar navbar-default">
+        <div class="navbar-header">
+          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen vragenlijsten</p>
+        </div>
+        <div class="navbar-collapse collapse">
+          <p class="navbar-brand navbar-text navbar-right"><img src="images/ulrich.png" alt="Ulrich Kelchtermans" class="img-circle">Ulrich Kelchtermans</p>
+        </div><!--/.nav-collapse -->
+      </div>
+
+      <!-- Patient header -->
+      <div class="jumbotron">
+        <img src="images/angelina.jpg" alt="Angelina Jolie" class="img-thumbnail" />
+        
+        <!-- Patient's connected device -->
+          <div class="device well">
+              <div>
+                  <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
+                  <p>No iPad</p>
+              </div>
+          </div>
+
+        <!-- Patient detail -->
+        <table class="table">
+          <tr>
+            <th>Nummer</th>
+            <td>1050702</td>
+          </tr>
+          <tr>
+            <th>Naam</th>
+            <td>Angelina Jolie</td>
+          </tr>
+          <tr>
+            <th>Geboortedatum</th>
+            <td>14 mei 1976</td>
+          </tr>
+          <tr>
+            <th>Geslacht</th>
+            <td>Vrouw</td>
+          </tr>
+        </table>
+      </div>
+
+      <!-- Devices -->
+      <div class="devices">
+        <p class="description">Selecteer een toestel dat u wil koppelen aan bovenstaande patient.</p>
+        <div class="device well">
+          <div>
+            <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
+            <p>No iPad</p>
+          </div>
+        </div>
+        <div class="device well">
+          <div>
+            <img src="images/blue-ipad.png" alt="Connected device" class="img-rounded">
+            <p>Blue iPad</p>
+          </div>
+        </div>
+        <div class="device well">
+          <div>
+            <img src="images/green-ipad.png" alt="Connected device" class="img-rounded">
+            <p>Green iPad</p>
+          </div>
+        </div>
+        <div class="device well">
+          <div>
+            <img src="images/purple-ipad.png" alt="Connected device" class="img-rounded">
+            <p>Purple iPad</p>
+          </div>
+        </div>
+        <div class="device well">
+          <div>
+            <img src="images/gray-ipad.png" alt="Connected device" class="img-rounded">
+            <p>Gray iPad</p>
+          </div>
+        </div>
+        <div class="device well">
+          <div>
+            <img src="images/yellow-ipad.png" alt="Connected device" class="img-rounded">
+            <p>Yellow iPad</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Assignments -->
+      <ul class="nav nav-pills assignment-filter">
+        <li class="active"><a href="#all" data-type="all">Alle vragenlijsten</a></li>
+        <li><a href="#linked" data-type="linked">Gekoppelde vragenlijsten</a></li>
+        <li><a href="#open" data-type="open">Beschikbare vragenlijsten</a></li>
+      </ul>
+
+        <ul class="assignments list-group">
+            <li ng-repeat="quest in quests" data-id="{{quest.itemData.id}}" data-assignment-id="{{quest.assignmentId}}" data-checked="{{quest.checked == true}}" class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>{{quest.itemData.name}}</span></li>
+        </ul>
+
+    </div> <!-- /container -->
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/master.js"></script>
+
+  </body>
+</html>
