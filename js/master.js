@@ -140,7 +140,7 @@ $(function () {
             for (var i = 0; i < data.medicines.length; i++) {
                 print = "<h3>" + data.medicines[i].name + " " + data.medicines[i].description + "</h3>" +
                     "<div id='" + data.medicines[i].name + "'>" +
-                    "<p>" + data.medicines[i].usage + " " + data.medicines[i].packaging.amount + " Tabletten resterend" + "</p>" +
+                    "<p>" + data.medicines[i].usage + ", " + data.medicines[i].packaging.amount + " tabletten resterend" + "</p>" +
                     "<p>" + "Toegevoegd voor: " + data.medicines[i].familyMembers[0].name + "</p></div>";
 
                 $('#accordion').append(print);
