@@ -172,7 +172,6 @@ $(function () {
 });
 
 $(document).ready(function() {
-
     $("#datepicker").datepicker({
         dateFormat: "yy-mm-dd",
         onSelect: function(value) {
@@ -205,8 +204,6 @@ $(document).ready(function() {
         });
     }
 });
-
-
 
 //    var date = new Date();
 //    var d = date.getDate();
