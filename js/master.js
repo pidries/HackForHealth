@@ -2,7 +2,7 @@ $(function () {
     $.fn.outerHTML = function() {
       return $(this).clone().wrap('<div></div>').parent().html();
     };
-    
+
     $.fn.reverse = function() {
         return this.pushStack(this.get().reverse(), arguments);
     };
@@ -14,24 +14,24 @@ $(function () {
         var moveUp = listHeight - (listHeight - liTop);
         var moveDown = liHeight;
         var id = item.attr("data-id");
-       
+
         var enough = false;
         var speed = 500;
         var html = item.outerHTML();
-    
+
         var lis = checked ? $(".assignments li") : $(".assignments li").reverse();
         lis.each(function() {
             if ($(this).attr("data-id") == id) return false;
             $(this).animate({"top": (checked ? '+=' : '-=') + moveDown}, speed);
         });
-    
+
         item.animate({"top": (checked ? '-=' : '+=') + moveUp}, speed, function() {
             item.remove();
             var oldHtml = $(".assignments").html();
             if (checked) $(".assignments").html(html + oldHtml);
             else $(".assignments").html(oldHtml + html);
             $(".assignments li").attr("style", "");
-            
+
         });
     }
 
@@ -57,7 +57,7 @@ $(function () {
                 url: 'http://medicinecabinets.apiary.io/v1/medicines/1/assignments?patientId=1002840&questionnaireId='+$li.attr("data-id"),
                 async: false,
                 type: "POST"
-            }).done(function ( data ) { 
+            }).done(function ( data ) {
    			  $li.attr("data-assignment-id", data.data);
 			});
         } else {
@@ -66,7 +66,7 @@ $(function () {
                 type: "DELETE"
             });
         }*/
-        
+
         $(this).attr("data-checked", checked ? "true" : "false");
 
         var type = $(".assignment-filter li.active a:first").attr("data-type");
@@ -100,4 +100,13 @@ $(function () {
             $(".assignments li").css("display", "");
         }
     });
+
+    // jQuery effect to hide the patient information on page load. Show this information on profile click.
+    jQuery(document).ready(function() {
+        jQuery(".toggle").click(function() {
+                console.log($(this));
+            $(this).find('.hide').removeClass('hide');
+        });
+    });
+
 });
