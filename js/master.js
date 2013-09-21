@@ -45,6 +45,23 @@ $(function () {
          });
     }
 
+    function getFamMembers(){
+        $placeholder = $('#placeholder');
+        // var dataSet = cultuur;
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/?callback=foo', function(data) {
+            print = "id: " + (data);
+            console.log('loading'+ data[0].familyMemberId)
+        })
+        .done(function(data) {
+            console.log( "second success" );
+
+         })
+        .complete(function(data) {
+            console.log( "done" );
+
+         });
+    }
+    getFamMembers();
     // Clicking on the assignment row in order to assign
     $(document).on("click", ".assignments li", function () {
         if ($(":animated").length > 0) return false;
