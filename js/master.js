@@ -141,7 +141,7 @@ $(document).ready(function() {
             center: 'title',
             right: 'month,basicWeek,basicDay'
         },
-        editable: true,
+        editable: false,
         events: [
             {
                 title: 'All Day Event',
@@ -187,7 +187,10 @@ $(document).ready(function() {
                 end: new Date(y, m, 29),
                 url: 'http://google.com/'
             }
-        ]
+        ],
+        eventClick: function (event) {
+            window.alert(event.title);
+        }
     });
 
 });
