@@ -13,22 +13,16 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/master.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="js/html5shiv.js"></script>
-      <script src="js/respond.min.js"></script>
-    <![endif]-->
-
   </head>
   <body>
     <div class="container">
       <!-- Static navbar -->
       <div class="navbar navbar-default">
         <div class="navbar-header">
-          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen tsadfasdfetet</p>
+          <p class="navbar-brand"><img src="images/logo.png" />Toewijzen vragenlijsten</p>
         </div>
         <div class="navbar-collapse collapse">
-          <p class="navbar-brand navbar-text navbar-right"><img src="images/ulrich.png" alt="Ulrich Kelchtermans" class="img-circle">Ulrich Kelchtermans</p>
+          <p class="navbar-brand navbar-text navbar-right"><img src="images/angelina.jpg" alt="Angelina Jolie" class="img-circle">Angelina Jolie</p>
         </div><!--/.nav-collapse -->
       </div>
 
@@ -40,7 +34,7 @@
           <div class="device well">
               <div>
                   <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
-                  <p>No iPad</p>
+                  <p>Family member</p>
               </div>
           </div>
 
@@ -67,7 +61,7 @@
 
       <!-- Devices -->
       <div class="devices">
-        <p class="description">Selecteer een toestel dat u wil koppelen aan bovenstaande patient.</p>
+        <p class="description">Selecteer een familielid.</p>
         <div class="device well">
           <div>
             <img src="images/no-ipad.png" alt="Connected device" class="img-rounded">
@@ -108,13 +102,12 @@
 
       <!-- Assignments -->
       <ul class="nav nav-pills assignment-filter">
-        <li class="active"><a href="#all" data-type="all">Alle vragenlijsten</a></li>
-        <li><a href="#linked" data-type="linked">Gekoppelde vragenlijsten</a></li>
-        <li><a href="#open" data-type="open">Beschikbare vragenlijsten</a></li>
+        <li class="active"><a href="#all" data-type="all">Overview</a></li>
+        <li><a href="#linked" data-type="linked">Calendar</a></li>
       </ul>
 
         <ul class="assignments list-group">
-            <li data-id="{{quest.itemData.id}}" data-assignment-id="{{quest.assignmentId}}" data-checked="{{quest.checked == true}}" class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>{{quest.itemData.name}}</span></li>
+            <li class="list-group-item"><span class="glyphicon glyphicon-ok"></span><span>Medicin 1</span></li>
         </ul>
 
     </div> <!-- /container -->
