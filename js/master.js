@@ -46,20 +46,25 @@ $(function () {
     }
 
     function getFamMembers(){
-        $placeholder = $('#placeholder');
-        // var dataSet = cultuur;
-        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/?callback=foo', function(data) {
-            print = "id: " + (data);
-            console.log('loading'+ data[0].familyMemberId)
+        $navigation = $('nav li.dropdown .dropdown-menu');
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
+            print = "id: " + data.familymembers[0].name;
+
+            for (var i=0;i<data.familymembers.length;i++)
+            {
+                print ='<li><a href="#user-' + data.familymembers[i].id + '">' + data.familymembers[i].name + '</a></li>';
+
+                $navigation.append(print);
+            }
         })
         .done(function(data) {
-            console.log( "second success" );
 
          })
         .complete(function(data) {
-            console.log( "done" );
 
          });
+
+
     }
     getFamMembers();
     // Clicking on the assignment row in order to assign
