@@ -100,4 +100,13 @@ $(function () {
             $(".assignments li").css("display", "");
         }
     });
+
+    // jQuery effect to hide the patient information on page load. Show this information on profile click.
+    jQuery(document).ready(function() {
+        $('.jumbotron').hide();
+        jQuery(".toggle").click(function() {
+            $('.jumbotron').slideToggle("fast");
+        });
+    });
+
 });
