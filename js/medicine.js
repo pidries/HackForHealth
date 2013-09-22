@@ -8,11 +8,11 @@ $(document).ready(function() {
 function getAllMedicines() {
     $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/medicines', function(data) {
         for (var i = 0; i < data.medicines.length; i++) {
-            print = "<h3>" + data.medicines[i].name + " " + data.medicines[i].description + "<span  style='margin: inherit'><button type='button' class='btn btn-default btn-sm'> <span class='glyphicon glyphicon-star'></span></button>" +
+            print = "<h3>" + data.medicines[i].name + "<span style='margin: inherit'><button type='button' class='btn btn-default btn-sm'> <span class='glyphicon glyphicon-star'></span></button>" +
                 "<button type='button' class='btn btn-default btn-sm'> <span class='glyphicon glyphicon-plus'></span></button></span>" + "</h3>" +
                 "<div id='" + data.medicines[i].name + "'>" +
-                "<p>" + data.medicines[i].usage + ", " + data.medicines[i].packaging.amount + " tabletten resterend" + "</p>" +
-                "<p>" + "Toegevoegd voor: " + data.medicines[i].familyMembers[0].name + "</p></div>";
+                "<p>" + data.medicines[i].usage + ", " + data.medicines[i].packaging.amount + " tablets left" + "</p>" +
+                "<p>" + "In use by: " + data.medicines[i].familyMembers[0].name + "</p></div>";
 
             $('#accordion').append(print);
         }
