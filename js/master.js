@@ -65,12 +65,14 @@ $(function () {
     }*/
 
     function getFamMembers(){
-        $navigation = $("#familySelection");
-        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
 
+        $navigation = $("#familySelection");
+
+        $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/familymembers/', function(data) {
             for (var i=0;i<data.familymembers.length;i++)
             {
                 print ='<li><a href="#user-' + data.familymembers[i].id + '">' + data.familymembers[i].name + '</a></li>';
+
 
                 $navigation.append(print);
             }
@@ -138,10 +140,10 @@ $(function () {
     function getAllMedicines() {
         $.getJSON('http://medicinecabinets.apiary.io/v1/cabinets/1/medicines', function(data) {
             for (var i = 0; i < data.medicines.length; i++) {
-                print = "<h3>" + data.medicines[i].name + " " + data.medicines[i].description + "</h3>" +
+                print = "<h3>" + data.medicines[i].name + "</h3>" +
                     "<div id='" + data.medicines[i].name + "'>" +
-                    "<p>" + data.medicines[i].usage + ", " + data.medicines[i].packaging.amount + " tabletten resterend" + "</p>" +
-                    "<p>" + "Toegevoegd voor: " + data.medicines[i].familyMembers[0].name + "</p></div>";
+                    "<p>" + data.medicines[i].usage + " usage, " + data.medicines[i].packaging.amount + " tablets left" + "</p>" +
+                    "<p>" + "In use by: " + data.medicines[i].familyMembers[0].name + "</p></div>";
 
                 $('#accordion').append(print);
             }
